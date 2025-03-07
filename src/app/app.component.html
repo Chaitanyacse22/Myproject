@@ -1,0 +1,561 @@
+<!-- <h1>Hello, Welcome to Angular from Chaitanya</h1>
+
+<img src="pexels-eberhardgross-691668.jpg"/> -->
+
+<!-- <button class="btn btn-success">Bootstrap Installed...</button>
+
+----------- One Way Binding ---------
+
+<h3>Given Name is : {{strName}}</h3>
+
+----------- Two Way Binding ---------
+
+<h2>Two way data Binding</h2> -->
+
+<!-- Enter the file name: <input type="text" [(ngModel)]="strFile"/><br>
+
+<h3>Given Name is : {{strName}}</h3> -->
+
+<!-- ------ Property Binding ------ -->
+
+<!-- Enter the file name: <input type="text" [(ngModel)]="strFile"/><br>
+
+<img id="hii" [src]="strFile"/> -->
+
+<!-- ------ Event Binding ------ -->
+
+<!-- <h1>Event Binding</h1>
+
+<button class="btn btn-outline-warning" (click)="ButtonClicked()">Click on the Button...</button> -->
+
+
+<!-- ------ ngIf ---------
+    The ngIf directive in Angular is a structural directive 
+    that conditionally includes or removes an element from 
+    the DOM based on the truthiness of an expression. It 
+    allows you to show or hide an element based on a condition.
+>
+
+<div id="loginform" *ngIf="login==true">
+    <h2>Login Form</h2>
+    <input type="text" name="userId" placeholder="Enter User Name"/><br><br>
+    <input type="text" name="pwd" placeholder="Enter Password"/><br><br>
+    <button type="submit" class="btn btn-warning">Login</button> &nbsp; &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-danger" (click)="toggleForm()">Registration</button>
+</div>
+<div id="registrationform" *ngIf="registration==true">
+    <h2>Registration Form</h2>
+    <input type="text" name="userId" placeholder="Enter User Name"/><br><br>
+    <input type="text" name="pwd" placeholder="Enter New Password"/><br><br>
+    <input type="text" name="pwd1" placeholder="Enter Confirm Password"/><br><br>
+    <button type="submit" class="btn btn-warning">Registration</button> &nbsp; &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-danger" (click)="toggleForm()">Login</button>
+</div> -->
+
+
+ <!-- ------ ngFor ---------
+    The ngFor directive in Angular is a structural directive
+    used for iterating over a collection (such as an array, list, or map)
+    and rendering a template for each item in the collection. It is commonly
+    used for displaying lists of data dynamically.
+ >
+
+<h1>Structural Directive - ngFor</h1>
+<button class="btn btn-outline-primary" (click)="displayData()">Display Product Data</button>
+<div *ngIf="DisplayProductData==true">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Poduct ID</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of prodLst">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.cost}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+ <!-- ------ ngSwitch ---------
+    The ngSwitch directive in Angular is a structural directive
+    that allows you to conditionally display one of several templates
+    based on a value. It works similarly to a switch-case statement in
+    programming languages, where the template to be displayed depends on the evaluated expression.
+ -->
+
+<!-- <span>Enter number between 1 - 5 : </span><input type="number" [(ngModel)]="SwitchNumber"/> <br> <br>
+<div [ngSwitch]="SwitchNumber">
+    <p *ngSwitchCase="1"> You Selected 1</p>
+    <p *ngSwitchCase="2"> You Selected 2</p>
+    <p *ngSwitchCase="3"> You Selected 3</p>
+    <p *ngSwitchCase="4"> You Selected 4</p>
+    <p *ngSwitchCase="5"> You Selected 5</p>
+    <p *ngSwitchDefault> Pls Enter the data from 1 to 5...</p>
+</div> -->
+
+<!-- ------ ngStyle ---------
+    The ngSwitch directive in Angular is a structural directive
+    that allows you to conditionally display one of several templates
+    based on the evaluation of an expression. It works similarly to a
+    switch-case statement in many programming languages, where you can
+    define different cases to display based on the evaluated value.
+ -->
+
+ <!-- Color: <input type="text" [(ngModel)]="strColor"/> &nbsp;
+ Font-Size: <input type="number" [(ngModel)]="fontSize"/> &nbsp;
+ Text: <input type="text" [(ngModel)]="strText"/> <br><br>
+
+<p [ngStyle]="{'color':strColor,'fontSize':fontSize+'px'}">{{strText}}</p> -->
+
+<!-- ------ ngClass ---------
+    The ngClass directive in Angular is a powerful attribute directive
+     used to dynamically add or remove CSS classes from an HTML element
+      based on certain conditions. It allows you to bind classes to an
+      element in a more flexible way than just using the standard class attribute.
+-->
+
+<!-- <p [ngClass]="{'active':connect, 'inactive':!connect}">
+    User's Internet Connection status is: {{connect ? 'connected':'Disconnected'}}
+</p>
+
+<button class="btn btn-outline-primary" (click)="toggleInternet()">Connect/Disconnect</button> -->
+
+
+<!-- ------ ngIf else Directive ---------
+    *ngIf is a directive which is used for conditional rendering elements in the DOM.
+In the scenario you might need to display an element when a condition is true and show something
+else (like an alternative view or message) when the condition is false. For this purpose, you can use the 
+else clause with *ngIf.
+-->
+<!-- <h1>ngIf else Directive</h1>
+
+<div *ngIf="Morning; else displayEvening">
+    <ng-container *ngTemplateOutlet="displayMorning"></ng-container>
+</div>
+
+<ng-template #displayMorning>
+    <button class="btn btn-primary" (click)="toggleDay()">Now It is Evening...</button> <br><br>
+    <h2>Hello, Its a bright Morning...</h2>
+</ng-template>
+
+<ng-template #displayEvening>
+    <button class="btn btn-primary" (click)="toggleDay()">Now It is Morning...</button> <br><br>
+    <h2>Its an amazing Evening... Lets sip a cup of Cofee..</h2>
+</ng-template> -->
+
+<!-- ------ ngFor with Index -----
+    *ngFor is an Angular directive used to iterate over a collection
+    (such as an array or list) and render a template for each item in the collection.
+    When using *ngFor, you can also access the index of the current item in the iteration,
+    which is helpful for showing the position of the item in the list or for applying specific logic based on the index.
+ -->
+
+<!-- <h1>ngFor with Index...</h1>
+<p *ngFor="let prod of prodLst; let i=index">
+    {{i+1}} - {{prod.productName}}
+</p> -->
+
+<!-- <h3 appHighLight> Move the mouse cursor on the text and also click on it...</h3>
+
+<h1 appHighLight> This is a custom directive...</h1>
+
+<p appHighLight> We are learning Angular...</p>
+
+<button appHighLight class="btn btn-success"> This is a button</button> -->
+
+<!-- <h1>View Child() - Can access DOM Element and can modify it...</h1>
+
+Enter Name: <input #inputBox type="text" placeholder="Enter Your Name"/> &nbsp;
+<button class="btn btn-success" (click)="changeStyleWithViewChild()">Change Style</button> -->
+
+<!-- <h1> Parent to Child Communication...</h1>
+
+<app-child>
+    <p> This is the data sent from Parent to Child...</p>
+</app-child> -->
+
+<!-- <div class="container">
+    <div class="box">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div> -->
+  
+
+<!-- <h1> Parent to Child Communication...</h1>
+
+<app-child>
+    <p #projectedContent> This is the data sent from Parent to Child...</p>
+</app-child> -->
+
+<!-- <h1>Product Service</h1>
+<button class="btn btn-outline-primary" (click)="displayProductData()">Display Product Data</button>
+<div *ngIf="displayProductsData==true">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Poduct ID</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of prodLst1">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.cost}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<!-- <button class="btn btn-primary" (click)="displayData()">Click here...</button> -->
+
+<!-- <h1>Template Driven</h1>
+<h2>Login Form</h2>
+<div id="loginform">
+    <form #loginform="ngForm" (ngSubmit)="onSubmitTemplateDriven(loginform)">
+        UserId : <br>
+        <input type="text" name="userId" ngModel/> <br> <br>
+
+        Password : <br>
+        <input type="text" name="pwd" ngModel/> <br> <br>
+
+        <button class="btn btn-outline-primary" type="submit">Login</button>
+    </form>
+</div>
+<br>
+<h2>{{strLoginFormResult}}</h2>
+
+<div id="hello" *ngIf="loginuser==true">
+    <img src="tom3.jpg" alt="">
+    <img src="tom1.jpg" alt="">
+    <img src="tom2.jpg" alt="">
+</div> -->
+
+<!-- <div id="loginform" *ngIf="login==true">
+    <h1>Template Driven</h1>
+    <h2>Login Form</h2>
+    <form #loginform="ngForm" (ngSubmit)="onSubmitTemplateDriven(loginform)">
+        UserId : <br>
+        <input type="text" name="userId" ngModel/> <br> <br>
+        <div *ngIf="userId?.invalid && (userId?.dirty || userId?.touched)">
+            <div *ngIf="userId?.errors?.['required']"> <h4> User Id is not entered...</h4> </div>
+        </div>
+
+        Password : <br>
+        <input type="text" name="pwd" ngModel/> <br> <br>
+        <div *ngIf="pwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="pwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="pwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+        </div>
+
+        <button class="btn btn-outline-primary" type="submit">Login</button> &nbsp; &nbsp; &nbsp; &nbsp;
+        <button class="btn btn-outline-primary" type="submit" (click)="toggleForm()">Registration</button>
+        <h3 *ngIf="loginuser==true">{{strLoginFormResult}}</h3>
+    </form>
+</div>
+<br>
+<div id="registrationform" *ngIf="registration==true">
+<h1>Registration from with Reactive Forms...</h1>
+<h2>Registration Form</h2>
+<div id="registrationForm">
+    <form [formGroup]="registrationForm" (ngSubmit)="RegistrationFormSubmit()"> <-- formGroup --- To specify a individual element we use formGroup  
+        User ID : <br>
+        <input type="text" name="userId" formControlName="userId"/> <br><br>
+
+        <div *ngIf="userId?.invalid && (userId?.dirty || userId?.touched)">
+            <div *ngIf="userId?.errors?.['required']"> <h4> User Id is not entered...</h4> </div>
+        </div>
+
+        Password : <br>
+        <input type="text" name="pwd" formControlName="pwd"/> <br> <br>
+
+        <div *ngIf="pwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="pwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="pwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+            <div *ngIf="pwd?.errors?.['invalidPassword']"><h4> Password must start with Chai... </h4></div>
+
+        </div>
+
+        Confirm Password : <br>
+        <input type="text" name="confirmPwd" formControlName="confirmPwd"/> <br> <br>
+
+        <div *ngIf="confirmPwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="confirmPwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="confirmPwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+            <div *ngIf="confirmPwd?.errors?.['invalidPassword']"><h4> Password must start with Chai... </h4></div>
+        </div>
+
+        <button class="btn btn-outline-primary" type="submit">Registration</button> &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="button" class="btn btn-danger" (click)="toggleForm()">Login</button>
+    </form>
+    {{strRegistrationMsg}}
+</div>
+</div>
+<div *ngIf="loginuser" class="image-cards">
+    <div class="card" *ngFor="let image of imageList">
+      <img [src]="image.url" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h5 class="card-title">{{image.title}}</h5>
+        <p class="card-text">{{image.description}}</p>
+        <div>
+            <a [href]="image.videoUrl" target="_blank" class="btn btn-outline-success">
+                Watch Video
+            </a>
+        </div>
+      </div>
+    </div> 
+  </div> -->
+
+  <!-- <div class="container-fluid" *ngIf="loginuser">
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-flip" onclick="this.classList.toggle('flip-active')">
+                <div class="card-inner">
+                    <div class="card-front card">
+                        <div class="card-header">
+                            <img src="tom.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tom and Jerry</h3>
+                            <p>The series revolves around the comedic rivalry between Tom, a house cat, and Jerry, a clever mouse. Their endless chase and constant pranks on each other form the core of the show.</p>
+                            <button class="btn btn-warning">Watch Episode</button>
+                        </div>
+                    </div>
+                    <div class="card-back card">
+                        <div class="card-body">
+                            <h3>More Details</h3>
+                            <p>Watch the funniest episodes of Tom and Jerry here. Get ready for the ultimate chase!</p>
+                            <button class="btn btn-info">Watch More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-flip" onclick="this.classList.toggle('flip-active')">
+                <div class="card-inner">
+                    <div class="card-front card">
+                        <div class="card-header">
+                            <img src="tom1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tom and Jerry</h3>
+                            <p>The series revolves around the comedic rivalry between Tom, a house cat, and Jerry, a clever mouse. Their endless chase and constant pranks on each other form the core of the show.</p>
+                            <button class="btn btn-warning">Watch Episode</button>
+                        </div>
+                    </div>
+                    <div class="card-back card">
+                        <div class="card-body">
+                            <h3>More Details</h3>
+                            <p>Watch more action-packed episodes of Tom and Jerry. Who will win the chase?</p>
+                            <button class="btn btn-info">Watch More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-flip" onclick="this.classList.toggle('flip-active')">
+                <div class="card-inner">
+                    <div class="card-front card">
+                        <div class="card-header">
+                            <img src="tom2.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tom and Jerry</h3>
+                            <p>The series revolves around the comedic rivalry between Tom, a house cat, and Jerry, a clever mouse. Their endless chase and constant pranks on each other form the core of the show.</p>
+                            <button class="btn btn-warning">Watch Episode</button>
+                        </div>
+                    </div>
+                    <div class="card-back card">
+                        <div class="card-body">
+                            <h3>More Details</h3>
+                            <p>See the cute babies of Tom and Jerry. Their adventures are even more adorable!</p>
+                            <button class="btn btn-info">Watch More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-flip" onclick="this.classList.toggle('flip-active')">
+                <div class="card-inner">
+                    <div class="card-front card">
+                        <div class="card-header">
+                            <img src="1152932.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tom and Jerry</h3>
+                            <p>The series revolves around the comedic rivalry between Tom, a house cat, and Jerry, a clever mouse. Their endless chase and constant pranks on each other form the core of the show.</p>
+                            <button class="btn btn-warning">Watch Episode</button>
+                        </div>
+                    </div>
+                    <div class="card-back card">
+                        <div class="card-body">
+                            <h3>More Details</h3>
+                            <p>Tom and Jerry continue their wild antics with funny and unexpected moments!</p>
+                            <button class="btn btn-info">Watch More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <h1>Employee Data with RxJs</h1>
+
+    <button class="btn btn-outline-primary" (click)="getAllEmployees()">Display Employee Data</button> &nbsp; &nbsp; &nbsp;
+    <button class="btn btn-outline-danger" (click)="addEmployeeRecord()">Add Record</button>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th> Employee ID </th>
+                <th> Name </th>
+                <th> Department </th>
+                <th> Designation </th>
+                <th> Edit/Modify </th>
+                <th> Delete </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empLst">
+                <td> {{emp.id}} </td>
+                <td> {{emp.name}} </td>
+                <td> {{emp.dept}} </td>
+                <td> {{emp.designation}} </td>
+                <td>&nbsp; &nbsp;
+                    <button class="btn btn-outline-primary" style="border-radius: 10px; padding-right: 15px;" (click)="onEditEmployeeRecord(emp)"> Edit </button>
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger" style="border-radius: 10px;" (click)="onDeleteEmployeeRecord(emp.id)"> Delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="DisplayAddOrEditForm == true" id="registrationForm">
+        <h2>{{strAddOrEditDisplayTitle}}</h2> <hr>
+        <form [formGroup]="EmployeeForm" (ngSubmit)="AddOrEditEmployeeRecord()">
+            Employee ID: <br>
+            <input type="text" name="id" formControlName="id"/> <br> <br>
+
+            Name : <br>
+            <input type="text" name="name" formControlName="name"/> <br> <br>
+
+            Department : <br>
+            <input type="text" name="dept" formControlName="dept"/> <br> <br>
+
+            Designation : <br>
+            <input type="text" name="designation" formControlName="designation"/> <br> <br>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+
+        </form>
+    </div> -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="" class="navbar-brand" style="margin-left: 0px;"><i class="fa-solid fa-cat"></i>Welcome to the Cartoon World</a>
+        <div class="container">
+            <ul class="nav nav-pills" style="margin-left: 150px;">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/home"> Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/products"> Cartoons </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/buying"> Watchlist </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/aboutus"> About Us </a>
+                </li> &nbsp; &nbsp;
+            </ul>
+        </div>
+        <button class="btn btn-outline-primary" style="margin-left: -500px;"  (click)="userLoggedIn()">Log In</button> &nbsp; &nbsp;
+        <button class="btn btn-outline-primary" (click)="userLoggedOut()">Log Off</button> &nbsp; &nbsp;
+    </nav>
+
+    <div id="loginform" class="glass2" *ngIf="login1==true">
+    <h2>Login Form</h2>
+    <form #loginform="ngForm" (ngSubmit)="onSubmitTemplateDriven(loginform)">
+        UserId : <br>
+        <input type="text" name="userId" ngModel/> <br> <br>
+        <div *ngIf="userId?.invalid && (userId?.dirty || userId?.touched)">
+            <div *ngIf="userId?.errors?.['required']"> <h4> User Id is not entered...</h4> </div>
+        </div>
+
+        Password : <br>
+        <input type="text" name="pwd" ngModel/> <br> <br>
+        <div *ngIf="pwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="pwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="pwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+        </div>
+
+        <button class="btn btn-outline-primary" type="submit">Login</button> &nbsp; &nbsp; &nbsp; &nbsp;
+        <button class="btn btn-outline-primary" type="submit" (click)="toggleForm1()">Registration</button>
+        <h3 *ngIf="loginuser==true">{{strLoginFormResult}}</h3>
+    </form>
+</div>
+<br>
+<div id="registrationform" class="glass2" *ngIf="registration1==true">
+<h2>Registration Form</h2>
+<div id="registrationForm">
+    <form [formGroup]="registrationForm" (ngSubmit)="RegistrationFormSubmit()">
+        User ID : <br>
+        <input type="text" name="userId" formControlName="userId"/> <br><br>
+
+        <div *ngIf="userId?.invalid && (userId?.dirty || userId?.touched)">
+            <div *ngIf="userId?.errors?.['required']"> <h4> User Id is not entered...</h4> </div>
+        </div>
+
+        Password : <br>
+        <input type="text" name="pwd" formControlName="pwd"/> <br> <br>
+
+        <div *ngIf="pwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="pwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="pwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+            <div *ngIf="pwd?.errors?.['invalidPassword']"><h4> Password must start with Chai... </h4></div>
+
+        </div>
+
+        Confirm Password : <br>
+        <input type="text" name="confirmPwd" formControlName="confirmPwd"/> <br> <br>
+
+        <div *ngIf="confirmPwd?.invalid && (pwd?.dirty ||pwd?.touched)">
+            <div *ngIf="confirmPwd?.errors?.['required']"><h4>Password is not entered...</h4></div>
+            <div *ngIf="confirmPwd?.errors?.['minlength']"><h4> Password has to be 5 chars minimum ... </h4></div>
+            <div *ngIf="confirmPwd?.errors?.['invalidPassword']"><h4> Password must start with Chai... </h4></div>
+        </div>
+
+        <button class="btn btn-outline-primary" type="submit">Registration</button> &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="button" class="btn btn-danger" (click)="toggleForm1()">Login</button>
+    </form>
+    {{strRegistrationMsg}}
+</div>
+</div>
+
+    <router-outlet></router-outlet>
+<!-- 
+Sending Data to the Parent to the Child <input type="text" [(ngModel)]="strParentData"/>
+
+<app-child [strReceviedData]="strParentData"></app-child> -->
