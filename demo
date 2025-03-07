@@ -1,0 +1,15 @@
+ng g c about-us
+
+ng g c buying
+
+ng g c child
+
+ng g c products
+
+ng g r auth
+
+ng g s auth
+
+ng g s products
+
+ng g s rest
