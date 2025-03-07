@@ -1,0 +1,26 @@
+<!-- <h1 style="color: aqua; font-size: 40px; text-align: center; margin-top: 400px;">Welcome to Products Page</h1> -->
+<!-- <h1>Product Service</h1> -->
+ <br> <br>
+<button class="btn btn-primary" (click)="displayProductData()" style="margin-left: 820px;">Display Cartoon Data</button><br><br>
+<div *ngIf="displayProductsData==true">
+    <table class="table table-hover"  class="glass">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Cartoon Name</th>
+                <th>Episodes</th>
+                <th>Source</th>
+                <th>Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of carLst">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.episodes}}</td>
+                <td>{{product.source}}</td>
+                <td><button class="btn btn-outline-primary" style="border-radius: 25px; text-align: center;" (click)="buyProductData(product)">Watch</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
