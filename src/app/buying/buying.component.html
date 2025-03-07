@@ -1,0 +1,22 @@
+<!-- <h1 style="color: rgb(10, 230, 193); font-size: 40px; text-align: center;" class="fst-italic">Welcome to Buying Page</h1> -->
+<br> <br>
+<div *ngIf="displayData == true">
+    <table class="table table-hover" class="glass">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Cartoon Name</th>
+                <th>Episodes</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.episodes}}</td>
+                <td>{{product.source}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
